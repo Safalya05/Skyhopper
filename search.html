@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Flights | SkyHopper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Filters Sidebar -->
+            <aside class="w-full md:w-1/4">
+                <div class="bg-white rounded-xl shadow-sm p-6 sticky top-4">
+                    <h2 class="text-xl font-bold mb-6">Filters</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-medium mb-3">Price Range</h3>
+                        <input type="range" min="100" max="2000" value="1000" class="w-full">
+                        <div class="flex justify-between mt-2">
+                            <span>$100</span>
+                            <span>$2000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-medium mb-3">Stops</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">Non-stop</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">1 Stop</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">2+ Stops</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-medium mb-3">Departure Time</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">Morning (6am-12pm)</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">Afternoon (12pm-6pm)</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">Evening (6pm-12am)</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">Night (12am-6am)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-medium mb-3">Airlines</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">IndiGo</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">Air India</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">Vistara</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary-500">
+                                <span class="ml-2">SpiceJet</span>
+</label>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-primary-500 text-white py-2 rounded-lg hover:bg-primary-600 transition">
+                        Apply Filters
+                    </button>
+                </div>
+            </aside>
+            
+            <!-- Search Results -->
+            <div class="w-full md:w-3/4">
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <h1 class="text-2xl font-bold mb-2">Flights from Delhi to Mumbai</h1>
+                    <p class="text-gray-600">Saturday, June 15 - 1 passenger, Economy</p>
+</div>
+                
+                <!-- Flight Cards -->
+                <div class="space-y-4">
+                    <!-- Flight 1 -->
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <div class="flex items-center mb-4 md:mb-0">
+                                <img src="http://static.photos/blue/200x200/1" alt="IndiGo" class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h3 class="font-bold">IndiGo</h3>
+                                        <p class="text-sm text-gray-600">6E 205 • Airbus A320</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="text-center mr-8">
+                                        <div class="text-xl font-bold">DEL</div>
+                                        <div class="text-sm text-gray-600">08:30 AM</div>
+                                    </div>
+                                    <div class="flex flex-col items-center mx-4">
+                                        <div class="text-sm text-gray-600">2h 15m</div>
+                                        <div class="w-24 border-t border-gray-300 my-1"></div>
+                                        <div class="text-xs text-gray-500">Non-stop</div>
+                                    </div>
+                                    <div class="text-center ml-8">
+                                        <div class="text-xl font-bold">BOM</div>
+                                        <div class="text-sm text-gray-600">10:45 AM</div>
+</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                <div class="mb-4 md:mb-0">
+                                    <div class="text-2xl font-bold text-primary-500">$429</div>
+                                    <div class="text-sm text-gray-600">Round trip per passenger</div>
+                                </div>
+                                <a href="/booking.html" class="bg-primary-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition text-center">
+                                    Select
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Flight 2 -->
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <div class="flex items-center mb-4 md:mb-0">
+                                <img src="http://static.photos/red/200x200/2" alt="Air India" class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h3 class="font-bold">Air India</h3>
+                                        <p class="text-sm text-gray-600">AI 865 • Boeing 787</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="text-center mr-8">
+                                        <div class="text-xl font-bold">DEL</div>
+                                        <div class="text-sm text-gray-600">11:45 AM</div>
+                                    </div>
+                                    <div class="flex flex-col items-center mx-4">
+                                        <div class="text-sm text-gray-600">2h 30m</div>
+                                        <div class="w-24 border-t border-gray-300 my-1"></div>
+                                        <div class="text-xs text-gray-500">Non-stop</div>
+                                    </div>
+                                    <div class="text-center ml-8">
+                                        <div class="text-xl font-bold">BOM</div>
+                                        <div class="text-sm text-gray-600">02:15 PM</div>
+</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                <div class="mb-4 md:mb-0">
+                                    <div class="text-2xl font-bold text-primary-500">$379</div>
+                                    <div class="text-sm text-gray-600">Round trip per passenger</div>
+                                </div>
+                                <a href="/booking.html" class="bg-primary-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition text-center">
+                                    Select
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Flight 3 -->
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <div class="flex items-center mb-4 md:mb-0">
+                                <img src="http://static.photos/green/200x200/3" alt="Vistara" class="w-12 h-12 rounded-full mr-4">
+                                    <div>
+                                        <h3 class="font-bold">Vistara</h3>
+                                        <p class="text-sm text-gray-600">UK 945 • Airbus A321</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="text-center mr-8">
+                                        <div class="text-xl font-bold">DEL</div>
+                                        <div class="text-sm text-gray-600">03:20 PM</div>
+                                    </div>
+                                    <div class="flex flex-col items-center mx-4">
+                                        <div class="text-sm text-gray-600">2h 05m</div>
+                                        <div class="w-24 border-t border-gray-300 my-1"></div>
+                                        <div class="text-xs text-gray-500">Non-stop</div>
+                                    </div>
+                                    <div class="text-center ml-8">
+                                        <div class="text-xl font-bold">BOM</div>
+                                        <div class="text-sm text-gray-600">05:25 PM</div>
+</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                <div class="mb-4 md:mb-0">
+                                    <div class="text-2xl font-bold text-primary-500">$499</div>
+                                    <div class="text-sm text-gray-600">Round trip per passenger</div>
+                                </div>
+                                <a href="/booking.html" class="bg-primary-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition text-center">
+                                    Select
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

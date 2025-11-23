@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.hero {
+    background-image: url('http://static.photos/aerial/1200x630/1');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 0.75rem;
+}
+
+.hero > div {
+    position: relative;
+    z-index: 1;
+}
+
+.destination-card {
+    transition: all 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-4px);
+}
+
+.search-card {
+    transition: box-shadow 0.3s ease;
+}
+
+.search-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyHopper - Book Your Next Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#3b82f6',
+                        },
+                        secondary: {
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="hero bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl p-8 mb-12 text-white">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl font-bold mb-4">Fly Anywhere, Anytime</h1>
+                <p class="text-xl mb-6">Find the best flight deals and book with confidence</p>
+                <a href="/search.html" class="bg-white text-primary-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Search Flights</a>
+            </div>
+        </section>
+
+        <!-- Flight Search Component -->
+        <section class="search-card bg-white rounded-xl shadow-lg p-6 mb-12">
+            <h2 class="text-2xl font-bold mb-6">Search Flights</h2>
+            <form id="flightSearchForm" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">From</label>
+                    <input type="text" placeholder="City or Airport" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">To</label>
+                    <input type="text" placeholder="City or Airport" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Departure</label>
+                    <input type="date" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                </div>
+                <div class="flex items-end">
+                    <button type="submit" class="w-full bg-primary-500 text-white p-3 rounded-lg hover:bg-primary-600 transition">Search Flights</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Popular Destinations -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Popular Destinations</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#" class="destination-card group">
+                    <div class="relative overflow-hidden rounded-xl h-64">
+                        <img src="http://static.photos/travel/640x360/1" alt="Paris" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold">Delhi</h3>
+                                <p class="text-white/80">From ₹12,999</p>
+</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="destination-card group">
+                    <div class="relative overflow-hidden rounded-xl h-64">
+                        <img src="http://static.photos/travel/640x360/2" alt="Tokyo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold">Mumbai</h3>
+                                <p class="text-white/80">From ₹10,499</p>
+</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="destination-card group">
+                    <div class="relative overflow-hidden rounded-xl h-64">
+                        <img src="http://static.photos/travel/640x360/3" alt="New York" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold">Bangalore</h3>
+                                <p class="text-white/80">From ₹9,999</p>
+</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="destination-card group">
+                    <div class="relative overflow-hidden rounded-xl h-64">
+                        <img src="http://static.photos/travel/640x360/4" alt="Bali" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold">Goa</h3>
+                                <p class="text-white/80">From ₹8,499</p>
+</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Why Choose SkyHopper</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="award" class="text-primary-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Best Price Guarantee</h3>
+                    <p class="text-gray-600">We guarantee the best prices for your flights. Found it cheaper elsewhere? We'll match it.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="headphones" class="text-secondary-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">24/7 Customer Support</h3>
+                    <p class="text-gray-600">Our dedicated support team is available round the clock to assist you with any queries.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="text-yellow-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Flexible Booking</h3>
+                    <p class="text-gray-600">Change your travel plans with ease with our flexible booking options.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
